@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="form.css" />
+    <style>
+      label {
+        float: left;
+        width: 150px;
+      }
+      #container {
+        width: 700px;
+        margin: auto;
+        background-color: beige;
+      }
+      main {
+        padding: 50px;
+      }
+      table {
+        width: 90%;
+        text-align: left;
+        border-collapse: collapse;
+        border-radius: 1em;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      th {
+        background-color: #6ce0b9;
+        height: 30px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+
+      tr {
+        background: #f2f9fc;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 5px;
+      }
+
+      td {
+        font-family: Montserrat-Regular;
+        font-size: 14px;
+        height: 30px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        font-family: "Montserrat", sans-serif;
+        color: rgb(28, 99, 175);
+      }
+
+      td:hover {
+        background-color: #fcebf5;
+        cursor: pointer;
+      }
+
+      .error {
+        color: red;
+        font-size: 20px;
+      }
+
+      .success {
+        color: green;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h2>Feeback</h2>
+        <h3>Love something? Hate something? Let us know!</h3>
+        Note : Fields marked with an asterisk(*) are mandatory
+        <br /><br />
+        <form method="post" name="myForm" id="myForm" novalidate>
+          <label>Title*:</label>
+          <input
+            type="radio"
+            name="title"
+            id="miss"
+            value="miss"
+            required="required"
+          />Miss
+          <input
+            type="radio"
+            name="title"
+            id="mr"
+            value="mr"
+            required="required"
+          />Mr.
+          <input
+            type="radio"
+            name="title"
+            id="mrs"
+            value="mrs"
+            required="required"
+          />Mrs. <br /><br />
+          <label for="firstName">First Name*:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
+            oninput="validateFirstName()"
+          />
+          <br /><br />
+
+          <label for="lastName">Last Name*:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+            oninput="validateLastName()"
+          />
+          <br /><br />
+
+          <label for="emailId">Email Id*:</label>
+          <input
+            type="text"
+            name="emailId"
+            id="emailId"
+            placeholder="yourname@domain.com"
+            oninput="validateEmail()"
+          />
+          <br /><br />
+
+          <label for="phoneNumber">Phone Number*:</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="xxx-xxx-xxxx"
+            oninput="validatePhoneNumber()"
+          />
+          <br /><br />
+
+          <label for="zipcode">ZipCode*:</label>
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            placeholder="xxxxxx"
+            oninput="validateZipCode()"
+          />
+          <br /><br />
+
+          <label for="source">How did you hear*:</label>
+          <input type="checkbox" name="source" value="facebook" /> Facebook
+          <input type="checkbox" name="source" value="google" /> Google
+          <input type="checkbox" name="source" value="yelp" /> Yelp <br /><br />
+
+          <label for="comments">Comments*:</label>
+          <textarea
+            name="text"
+            id="comments"
+            placeholder="Your comments"
+            rows="5"
+            cols="25"
+            required
+          ></textarea>
+          <br /><br />
+          <input type="submit" id="btn" />
+          <input type="Reset" />
+          <br /><br />
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
